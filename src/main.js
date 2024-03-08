@@ -11,6 +11,7 @@ searchForm.addEventListener('submit', async (event) => {
     showWarning('Please enter a search query!');
     return;
   }
+  showLoader();
   try {
     const images = await pixabayApi.fetchImages(query);
     renderGallery(images);
