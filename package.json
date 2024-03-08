@@ -15,6 +15,7 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^6.10.0",
     "izitoast": "^1.4.0",
     "pixabay": "^0.0.1",
     "pixabay-api": "^1.0.4",

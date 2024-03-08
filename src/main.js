@@ -1,3 +1,5 @@
+import pixabayApi from './js/pixabay-api.js';
+import renderFunctions from './js/render-functions.js';
 const searchForm = document.querySelector('.search-form');
 const searchInput = document.querySelector('.search-input');
 
@@ -9,9 +11,6 @@ searchForm.addEventListener('submit', async (event) => {
     showWarning('Please enter a search query!');
     return;
   }
-
-  showLoader();
-
   try {
     const images = await pixabayApi.fetchImages(query);
     renderGallery(images);
@@ -33,9 +32,6 @@ function handleError(error) {
   showErrorMessage('An error occurred. Please try again later.');
 }
 
-function showLoader() {
-  renderFunctions.showLoader();
-}
 
 function hideLoader() {
   renderFunctions.hideLoader();

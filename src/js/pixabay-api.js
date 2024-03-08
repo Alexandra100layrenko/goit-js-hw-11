@@ -1,4 +1,4 @@
-const apiKey = 'YOUR_API_KEY';
+const apiKey = '42772780-849d5e67a8b9b0ab7e6b7483b';
 
 export default {
   async fetchImages(query) {

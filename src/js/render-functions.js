@@ -1,9 +1,12 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import * as renderFunctions from './js/render-functions.js';
+
 
 export default {
-  renderGallery(images) {
-    const galleryList = document.querySelector('.gallery');
+  function renderGallery(images) {
+    renderGallery(images);
+  }
     if (!galleryList) {
       console.error('Gallery list not found');
       return;
