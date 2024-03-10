@@ -3,7 +3,7 @@ import {
   showLoader,
   hideLoader,
   handleError,
-  showWarning,
+  showWarning
 } from './js/render-functions.js';
 
 import pixabayApi from './js/pixabay-api.js';

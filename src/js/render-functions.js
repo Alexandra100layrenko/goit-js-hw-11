@@ -73,4 +73,10 @@ function showWarning(message) {
   });
 }
 
-export { renderGallery, showLoader, hideLoader, handleError, showWarning };
+export {
+  renderGallery,
+  showLoader,
+  hideLoader,
+  handleError,
+  showWarning
+};
