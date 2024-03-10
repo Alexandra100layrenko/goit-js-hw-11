@@ -1,5 +1,13 @@
+import {
+  renderGallery,
+  showLoader,
+  hideLoader,
+  handleError,
+  showWarning,
+} from './js/render-functions.js';
+
 import pixabayApi from './js/pixabay-api.js';
-import renderFunctions from './js/render-functions.js';
+
 const searchForm = document.querySelector('.search-form');
 const searchInput = document.querySelector('.search-input');
 
@@ -11,6 +19,7 @@ searchForm.addEventListener('submit', async (event) => {
     showWarning('Please enter a search query!');
     return;
   }
+
   showLoader();
   try {
     const images = await pixabayApi.fetchImages(query);
@@ -21,33 +30,3 @@ searchForm.addEventListener('submit', async (event) => {
     hideLoader();
   }
 });
-function renderGallery(images) {
-  renderFunctions.renderGallery(images);
-
-  const lightbox = new SimpleLightbox('.gallery a');
-  lightbox.refresh();
-}
-
-function handleError(error) {
-  console.error('Error:', error);
-  showErrorMessage('An error occurred. Please try again later.');
-}
-
-
-function hideLoader() {
-  renderFunctions.hideLoader();
-}
-
-function showWarning(message) {
-  iziToast.warning({
-    title: 'Warning',
-    message: message,
-  });
-}
-
-function showErrorMessage(message) {
-  iziToast.error({
-    title: 'Error',
-    message: message,
-  });
-}
