@@ -23,12 +23,14 @@ function renderGallery(images) {
     .map((image) => `
       <li class="gallery-item">
         <a href="${image.largeImageURL}" class="gallery-link">
-          <img
-            src="${image.webformatURL}"
-            alt="${image.tags}"
-            class="gallery-image"
-          />
+          <img src="${image.webformatURL}" alt="${image.tags}" class="gallery-image" />
         </a>
+        <div class="gallery-item-info">
+          <div class="info-item">Likes: ${image.likes}</div>
+          <div class="info-item">Views: ${image.views}</div>
+          <div class="info-item">Comments: ${image.comments}</div>
+          <div class="info-item">Downloads: ${image.downloads}</div>
+        </div>
       </li>
     `)
     .join('');
