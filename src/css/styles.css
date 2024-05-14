@@ -59,10 +59,12 @@ body {
 
 .search-input:hover,
 .search-input:focus{
-  border-color: #000000;
+  border: 1px solid #000000
 }
-.search-input:active{
- border-color: #4E75FF;
+
+.search-input:active,
+.search-input:focus{
+ border: 1px solid #4E75FF
 }
 
 .form-btn {
