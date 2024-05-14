@@ -62,8 +62,7 @@ body {
   border: 1px solid #000000;
 }
 
-.search-input:active,
-.search-input:focus{
+.search-input:active{
  border: 1px solid #4E75FF;
 }
 
@@ -83,10 +82,6 @@ body {
   cursor: pointer;
 }
 
-.search-input:hover,
-.search-input:focus {
-  border-color: #4E75FF;
-}
 
 .loader{
   display: block;
